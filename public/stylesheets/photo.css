@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#header {
+    z-index: 997;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    padding: 0 24px;
+    box-shadow: 0 1px 12px #e3e7ec, inset 0 -1px #f5f5f5;
+}
+
+#listTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: calc(100vw - 550px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#scrollDiv {
+    width: 100%;
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    overflow-y: auto;
+}
+
+#container {
+    padding: 0;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#logo, #logo img {
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+}
+
+#nav .fixedNav {
+    width: 100%;
+    position: sticky;
+    top: 64px;
+}
+
+.listNav{
+    width: 100%;
+    height: 44px;
+    padding-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.listNav .listBtn {
+    margin-right: 16px;
+    height: 100%;
+    line-height: 40px;
+}
+
+.listBtn span {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#photoList {
+    padding-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: center;
+}
+
+.photoItem {
+    width: calc(100%/3);
+    /*height: 150px;*/
+    /*table-layout: fixed;
+    word-wrap: break-word;*/
+    overflow: hidden;
+}
+/* 控制div长宽比*/
+.photoItem::before {
+    content: '';
+    padding-top: 60%;
+    float: left;
+}
+
+.photoItem::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.photoItem a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+a img.photo {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(100% / 25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*transition: transform 0.3s ease-in-out;*/
+    object-fit: cover;
+}
+/*
+a div img.photo:hover {
+    transform: scale(1.1);
+}*/

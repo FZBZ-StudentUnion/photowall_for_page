@@ -1,8 +1,8 @@
 var express = require('express');
 var fs = require('fs');
-var path = require('path');
+var path = require('path');/*
 var formidable = require('formidable');
-var sharp = require('sharp');
+var sharp = require('sharp');*/
 var router = express.Router();
 
 var photos = [];
@@ -21,7 +21,7 @@ function initPhotos(){
             oldFilenameUrl: '/images/photo/'+imagename,
             newFilenameUrl: '/images/webphoto/'+imagename.split('.')[0]+'.webp'
           })
-        
+        /*
           sharp(path.join(root, '/photo', imagename))
           .toFormat('webp')
           .resize(250, 150)
@@ -30,7 +30,7 @@ function initPhotos(){
             if (err){
               throw err;
             }
-          })
+          })*/
       }
     })
     flag = false;
@@ -38,6 +38,7 @@ function initPhotos(){
 }
 initPhotos();
 // 处理文件上传
+/*
 router.post('/photos', (req, res) => {
     const form = formidable({
         multiples: true,
@@ -79,7 +80,7 @@ router.post('/photos', (req, res) => {
             "data": imagename
         });
       });
-});
+});*/
   
   // 获取已上传照片列表
 router.get('/photos/:start', async (req, res) => {

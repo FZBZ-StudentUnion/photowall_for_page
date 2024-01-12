@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //var apiPhotoRouter = require('/var/task/routes/api/photo');
-var photoRouter = require('/var/task/routes/web/photo');
+var photoRouter = require('./routes/web/photo');
 
 var app = express();
 

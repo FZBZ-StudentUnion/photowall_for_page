@@ -7,7 +7,7 @@ var router = express.Router();
 
 var photos = [];
 let flag = true;
-const root = path.resolve('/public/images');
+const root = path.resolve(__dirname, '../../public/images');
 
 function initPhotos(){
   if (flag){

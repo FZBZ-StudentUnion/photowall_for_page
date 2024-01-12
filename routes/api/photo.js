@@ -8,7 +8,7 @@ var router = express.Router();
 var photos = [];
 let flag = true;
 const root = path.resolve(__dirname, '../../public/images');
-/*
+
 function initPhotos(){
   if (flag){
     let images = fs.readdirSync(path.join(root, '/photo'));
@@ -36,9 +36,9 @@ function initPhotos(){
     flag = false;
   }
 }
-initPhotos();*/
+initPhotos();
 // 处理文件上传
-/*
+
 router.post('/photos', (req, res) => {
     const form = formidable({
         multiples: true,
@@ -80,7 +80,7 @@ router.post('/photos', (req, res) => {
             "data": imagename
         });
       });
-});*/
+});
   
   // 获取已上传照片列表
 router.get('/photos/:start', async (req, res) => {

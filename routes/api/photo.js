@@ -8,7 +8,7 @@ var router = express.Router();
 var photos = [];
 let flag = true;
 const root = path.resolve(__dirname, '../../public/images');
-
+/*
 function initPhotos(){
   if (flag){
     let images = fs.readdirSync(path.join(root, '/photo'));
@@ -21,7 +21,7 @@ function initPhotos(){
             oldFilenameUrl: '/images/photo/'+imagename,
             newFilenameUrl: '/images/webphoto/'+imagename.split('.')[0]+'.webp'
           })
-        /*
+        
           sharp(path.join(root, '/photo', imagename))
           .toFormat('webp')
           .resize(250, 150)
@@ -30,13 +30,13 @@ function initPhotos(){
             if (err){
               throw err;
             }
-          })*/
+          })
       }
     })
     flag = false;
   }
 }
-initPhotos();
+initPhotos();*/
 // 处理文件上传
 /*
 router.post('/photos', (req, res) => {

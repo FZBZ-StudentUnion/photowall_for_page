@@ -11,7 +11,7 @@ const root = path.resolve('/var/task/public/images');
 
 function initPhotos(){
   if (flag){
-    let images = fs.readdirSync(path.join(root, '/photo'));
+    let images = fs.readdirSync(path.resolve(root, './photo'));
     images.forEach(imagename=>{
         if(fs.statSync(path.join(root, '/photo', imagename)).isFile()){
           photos.push({

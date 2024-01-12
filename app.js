@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var apiPhotoRouter = require('./routes/api/photo');
+//var apiPhotoRouter = require('./routes/api/photo');
 var photoRouter = require('./routes/web/photo');
 
 var app = express();

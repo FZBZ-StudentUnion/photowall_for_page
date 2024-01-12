@@ -4,20 +4,20 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//var apiPhotoRouter = require('./routes/api/photo');
-var photoRouter = require('./routes/web/photo');
+//var apiPhotoRouter = require('/var/task/routes/api/photo');
+var photoRouter = require('/var/task/routes/web/photo');
 
 var app = express();
 
 // view engine setup
-app.set('views', './views');
+app.set('views', '/var/task/views');
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static('./public'));
+app.use(express.static('/var/task/public'));
 
 //app.use('/api', apiPhotoRouter);
 app.use('/', photoRouter);

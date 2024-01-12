@@ -3,14 +3,14 @@
     "installCommand": "npm install",
     "builds": [
         {
-            "src": "/bin/www",
+            "src": "app.js",
             "use": "@now/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/bin/www"
+            "dest": "app.js"
         }
     ]
 }
